@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        fieldset {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset style="width:100px;">
+            <legend>Student Details</legend>
+            <table>
+                <tr>
+                    <td>UserName</td>
+                    <td><input type="text" id="one"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="three"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" id="two"></td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="date" id="birthday" name="birthday"></td>
+                </tr>
+                <tr>
+                    <td> Gender </td>
+                    </td>
+                    <td colspan="2">
+                        Male:<input type="radio" id="gen" name="Gender" value="male">
+                        Female:<input type="radio" id="gen" name="Gender" value="female"> </td>
+                </tr>
+                <tr>
+                    <td> Email Id</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>
+                        <select>
+                            <option selected>CSE</option>
+                            <option>ENTC</option>
+                            <option>MECH</option>
+                            <option>CIVIL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Comment </td>
+                    <td><textarea width="600"></textarea></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> <input type="button" id="four" value="submit"> </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

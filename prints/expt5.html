@@ -1,0 +1,73 @@
+<html>
+    <head><style>
+        span{
+            color: red;
+        }
+    </style></head>
+<body>
+    <center>
+    <form onsubmit="return myfun()">
+        <table>
+            <tr><td>username</td><td><input type="text" id="username"></td></tr> 
+            <tr><td></td><td><span id="msg1"></span></td></tr> 
+            <tr><td>Salary</td><td><input type="number" id="age"></td></tr> 
+            <tr><td></td><td><span id="age1"></span></td></tr> 
+            <tr><td>mobilenumber</td><td><input type="text" id="mob"></td></tr> 
+            <tr><td></td><td><span id="mob1"></span></td></tr> 
+            <tr><td>email</td><td><input type="text" id="e"></td></tr> 
+            <tr><td></td><td><span id="e1"></span></td></tr> 
+            <tr><td></td><td><input type="submit" value="submit"></td></tr> 
+        </table>
+    </form>
+    </center>
+    <script>
+      function myfun() {
+        var a = document.getElementById("username").value;
+
+        if (a == "") {
+          document.getElementById("msg1").innerHTML = "please enter name";
+          return false;
+        }
+        if (a.length < 3) {
+          var a = (document.getElementById("msg1").innerHTML =
+            "please enter name more than three digit");
+          return false;
+        }
+        if (a.length > 20) {
+          var a = (document.getElementById("msg1").innerHTML =
+            "please enter name less than twenty digit");
+          return false;
+        }
+        var b = document.getElementById("age").value;
+        if (b == "") {
+          document.getElementById("age1").innerHTML = "please enter Salary";
+          return false;
+        }
+        var c = document.getElementById("mob").value;
+        if (c == "") {
+          document.getElementById("mob1").innerHTML ="please enter mobile number";
+          return false;
+        }
+        if (isNaN(c)) {
+          var a = (document.getElementById("mob1").innerHTML = "please enter numbers");
+          return false;
+        }
+        if (c.length < 10) {
+          var a = (document.getElementById("mob1").innerHTML ="please enter valid number");
+          return false;
+        }
+        var f = document.getElementById("e").value;
+        var pattern = /^[A-Za-z0-9.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+        var pat = pattern.test(f);
+        if (f == "") {
+          document.getElementById("e1").innerHTML = "please enter email";
+          return false;
+        }
+        if (pat == false) {
+          document.getElementById("e1").innerHTML = "please enter valid email";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
