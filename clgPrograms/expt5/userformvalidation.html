@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Form with Validation</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return fun()">
+        <fieldset>
+            <legend>Student Details</legend>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" id="uname"></td>
+                </tr>
+                <tr>
+                    <td><span id="msg1"></span></td>
+                </tr>
+                <tr>
+                    <td>Mobile No:</td>
+                    <td><input type="text" name="mobno" id="mob"></td>
+                </tr>
+                <tr>
+                    <td><span id="msg2"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Email ID :</td>
+                    <td><input type="text" name="emailid" id="email"></td>
+                </tr>
+                <tr>
+                    <td><span id="msg3"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" onclick="return fun()" value="Submit"></td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+    </form>
+
+    <script>
+        function fun() {
+
+            let valid = true;
+
+            document.getElementById("msg1").innerHTML = "";
+            document.getElementById("msg2").innerHTML = "";
+            document.getElementById("msg3").innerHTML = "";
+
+            var a = document.getElementById("uname").value;
+            var b = document.getElementById("mob").value;
+            var c = document.getElementById("email").value;
+
+
+            if (a == "") {
+                document.getElementById("msg1").innerHTML = "Enter NAME!";
+                valid = false;
+            }
+
+             var namePattern = /^[A-Za-z]{3,20}$/ ;
+
+            if (namePattern.test(c) == false) {
+                document.getElementById("msg1").innerHTML = "Enter Valid NAME !";
+                valid = false;
+            }
+            // if (a.length < 3) {
+            //     document.getElementById("msg1").innerHTML = "Enter NAME greater than 3 characters";
+            //     valid = false;
+            // }
+
+            // if (a.length > 20) {
+            //     document.getElementById("msg1").innerHTML = "Enter NAME less than 20 characters";
+            //     valid = false;
+            // }
+
+            if (isNaN(a) == false) {
+                document.getElementById("msg1").innerHTML = "Enter NAME not Digit ";
+                valid = false;
+            }
+
+            if (b == "") {
+                document.getElementById("msg2").innerHTML = "Enter MOBILE NUMBER!";
+                valid = false;
+            }
+
+            if (isNaN(b)) {
+                document.getElementById("msg2").innerHTML = "Enter MOBILE NUMBER not Characters ";
+                valid = false;
+            }
+
+            if (c == "") {
+                document.getElementById("msg3").innerHTML = "Enter EMAIL ID !";
+                valid = false;
+            }
+
+            var emailPattern = /^[A-Za-z0-9.]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z]{2,6}$/;
+
+            if (emailPattern.test(c) == false) {
+                document.getElementById("msg3").innerHTML = "Enter Valid EMAIL ID !";
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+</body>
+
+</html>

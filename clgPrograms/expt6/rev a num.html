@@ -1,0 +1,25 @@
+<html>
+
+<head>
+
+    <title>reverse a num</title>
+</head>
+
+<body>
+    <p id="abc"></p>
+    <script>
+        let num = parseInt(prompt("enter a num : "));
+
+        let rev = 0;
+
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num = Math.floor(num/10);
+        }
+
+        document.getElementById("abc").innerHTML = rev;
+
+    </script>
+</body>
+
+</html>
