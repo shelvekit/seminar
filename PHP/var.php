@@ -1,7 +1,4 @@
 <html>
-  <head>
-      <meta http-equiv="refresh"content="1">
-  </head>
   <body>
     <?php
           $a = 10 ;
@@ -9,7 +6,7 @@
 
           $c = $a + $b ;
 
-          echo($c);
+          echo("sum is:"  . $c);
                   
     ?>
        
