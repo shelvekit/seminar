@@ -1,36 +1,29 @@
-
 <html>
-<head>
-    
+  <head>
     <title>list of prime number</title>
-</head>
-<body>
+  </head>
+  <body>
+    <script>
+      let start = parseInt(prompt("enter start num : "));
+      let end = parseInt(prompt("enter end num : "));
+      let isprime = true;
 
-   <script>
-    let start = parseInt(prompt("enter start num : ")) ;
-    let end = parseInt(prompt("enter end num : ")) ;
-
-    let isprime = true ;
-for(let i=start ; i <= end ; i++ ){
-
-    if(i==1){
-        i++; 
-    }
-    for(let j=2;j<i;j++){
-        if(i%j==0){
+      for (let i = start; i <= end; i++) {
+        if (i == 1) {
+          i++;
+        }
+        for (let j = 2; j < i; j++) {
+          if (i % j == 0) {
             isprime = false;
             break;
+          }
         }
-    }
-
-    if(isprime){
-        document.write(i+" ,");
-    }
-    else{
-        isprime=true;
-    }
-}
-    
-   </script> 
-</body>
+        if (isprime) {
+          document.write(i + " ,");
+        } else {
+          isprime = true;
+        }
+      }
+    </script>
+  </body>
 </html>
