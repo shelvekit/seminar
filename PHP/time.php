@@ -1,26 +1,24 @@
-html>
-    <head>
-  <meta http-equiv="refresh"content="1">
+<html>
+  <head>
+    <meta http-equiv="refresh"content="1">
     <style>
-        body
-        {
+      body
+      {
         background-color:purple;
         }
-         p
-        {
+      p
+      {
             text-align:center;
             margin-top:100px;
-        }
-        
-</style>
-    </head>
-    <body>
+      }
+    </style>
+  </head>
+  <body>
     <p>
-        <?php
-        date_default_timezone_set("Asia/kolkata");
-        echo date("h:i:sa");
-        ?>
-        </p>
+     <?php
+       date_default_timezone_set("Asia/kolkata");
+       echo date("h:i:sa");
+      ?>
+    </p>
   </body>
-    
-    </html>
+</html>
